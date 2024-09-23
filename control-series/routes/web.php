@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/index', [SeriesController::class, 'index']);
+Route::get('/index/criar', [SeriesController::class, 'index']);

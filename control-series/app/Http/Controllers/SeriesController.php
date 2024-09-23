@@ -14,14 +14,11 @@ class SeriesController extends Controller
             'A casa do dragão'
         ];
 
-        $html = '<ul>';
+        return view('series.index')->with('series', $series);
+    }
 
-        foreach ($series as $serie) {
-            $html .= "<li>$serie</li>";
-        };
-
-        $html .= '</ul>';
-
-        return $html;
+    public function create()
+    {
+        return view('series.create');
     }
 }
